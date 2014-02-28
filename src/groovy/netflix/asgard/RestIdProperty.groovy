@@ -15,23 +15,17 @@
  */
 package netflix.asgard
 
-import grails.rest.Resource
+import java.lang.annotation.ElementType
+import java.lang.annotation.Retention
+import java.lang.annotation.RetentionPolicy
+import java.lang.annotation.Target
 
 
 /**
  * Created by danw on 2/27/14.
  */
-@Resource(formats = ['json', 'android'])
-@RestIdProperty("name")
-class Application {
-    String name
-    String description
-    Boolean healthy
-
-    static hasMany = [autoScalingGroups: AutoScalingGroup]
-    static mappedBy = ['autoScalingGroups': 'application']
-
-    static constraints = {
-        autoScalingGroups nullable: true
-    }
+@Retention(RetentionPolicy.RUNTIME)
+@Target([ElementType.TYPE])
+public @interface RestIdProperty {
+    String value() default "id";
 }
