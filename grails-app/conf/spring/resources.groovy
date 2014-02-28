@@ -1,6 +1,4 @@
-import netflix.asgard.ApplicationCustomHalJsonRenderer
-import netflix.asgard.ApplicationJsonCollectionRenderer
-import netflix.asgard.ApplicationJsonRenderer
+import netflix.asgard.AutoScalingRenderer
 
 
 beans = {
@@ -10,5 +8,7 @@ beans = {
     //applicationJsonRenderer(ApplicationJsonRenderer)
     //applicationJsonCollectionRenderer(ApplicationJsonCollectionRenderer)
 
-    applicationCustomHal(ApplicationCustomHalJsonRenderer)
+    //applicationCustomHal(ApplicationCustomHalJsonRenderer)
+
+    autoScalingRenderer(AutoScalingRenderer)
 }
