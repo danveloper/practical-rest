@@ -28,7 +28,8 @@ grails.mime.types = [ // the first one is the default format
     rss:           'application/rss+xml',
     text:          'text/plain',
     hal:           ['application/hal+json','application/hal+xml'],
-    xml:           ['text/xml', 'application/xml']
+    xml:           ['text/xml', 'application/xml'],
+    android:       'application/netflix.asgard.mobile.applications+json'
 ]
 
 // URL Mapping Cache Max Size, defaults to 5000
@@ -63,7 +64,7 @@ grails {
     }
 }
 
- 
+
 grails.converters.encoding = "UTF-8"
 // scaffolding templates configuration
 grails.scaffolding.templates.domainSuffix = 'Instance'

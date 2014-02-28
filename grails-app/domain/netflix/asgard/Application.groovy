@@ -21,7 +21,7 @@ import grails.rest.Resource
 /**
  * Created by danw on 2/27/14.
  */
-@Resource
+@Resource(formats = ['json', 'android'])
 class Application {
     String name
     String description
